@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet" />
+     <!-- FontAwesome for Icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <!-- Google Fonts for Aesthetic Typography -->
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="web.png">
+    <link rel="stylesheet" href="style/styles.css">
+    <title>Unicentral</title>
+</head>
+<body>
+    
+<!--header-->
+<header id="home">
+    <header>
+        <section class="navigation">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="logoSVG/logo (4).svg" alt="logo">
+            </div>
+        
+            <!-- Burger Menu -->
+            <div class="burger-menu" id="burger-menu" data-toggle="navlinks">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        
+            <!-- Navlinks and Buttons Container -->
+            <div class="navlinks">
+                <ul>
+                    <li><a href="#" class="smoothScroll">Home</a></li>
+                    <li><a href="#about" class="smoothScroll">About</a></li>
+                    <li><a href="#works" class="smoothScroll">Applications</a></li>
+                    <li><a href="#tours" class="smoothScroll">Universities</a></li>
+                    <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                </ul>
+                <!-- Include the 'Join Us' button inside the navlinks -->
+                <div class="buttons">
+                    <a href="target-page.html" class="signin" id="start-journey-btn">Join Us</a>
+                </div>
+
+                <script>
+                    document.getElementById('start-journey-btn').addEventListener('click', function() {
+                        window.location.href = 'loginSignIn.html'; // Replace 'target-page.html' with the URL of the page you want to navigate to
+                    });
+                </script>
+
+            </div>
+        
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const burgerMenu = document.getElementById('burger-menu');
+                    const navlinks = document.querySelector('.navlinks');
+                    
+                    // Toggle menu on burger menu click
+                    burgerMenu.addEventListener('click', function() {
+                        navlinks.classList.toggle('active');
+                        burgerMenu.classList.toggle('active');
+                        document.body.classList.toggle('active-blur'); // Optional: Add blur effect
+                    });
+                    
+                    // Close the menu when clicking outside (optional)
+                    document.addEventListener('click', function(event) {
+                        if (!navlinks.contains(event.target) && !burgerMenu.contains(event.target)) {
+                            navlinks.classList.remove('active');
+                            burgerMenu.classList.remove('active');
+                            document.body.classList.remove('active-blur');
+                        }
+                    });
+                });
+            </script>
+        </section>
+        
+
+        <section class="contact" >
+            <!-- opening information about the vehicle -->
+            <div class="information">
+                <h1>Welcome to UniCentral!</h1>
+                <p>
+                    Your one-stop hub for all university applications. With our streamlined platform, you can effortlessly
+                    manage and unify your university applications in one place. Say goodbye to scattered paperwork
+                    and hello to a simpler, more efficient process. 
+                    <span class="highlight">Unify Your University Applications</span> with UniCentral and take control of your academic journey today!
+                </p>
+
+                 <!-- CTA Button -->
+                 <div class="cta">
+                  <button class="cta-button" onclick="toggleInfo()">Get Started</button>
+              </div>
+              
+              <!-- Overlay starts hidden -->
+              <div class="background-overlay" style="display: none;"></div> 
+              
+              <div id="infoSection" class="info-section" style="display: none;">
+                  <h2>Welcome to UniCentral!</h2>
+                  <p>Here you can explore universities, check application deadlines, and start your journey towards higher education.</p>
+                  <ul>
+                      <li>Find universities that match your preferences.</li>
+                      <li>Stay updated with application dates and deadlines.</li>
+                      <li>Access resources to help with your application process.</li>
+                  </ul>
+                  <button onclick="hideInfo()">Close</button>
+              </div>
+              
+              
+              
+                  <script>
+                         function toggleInfo() {
+                          var infoSection = document.getElementById("infoSection");
+                          var overlay = document.querySelector(".background-overlay");
+
+                          if (infoSection.style.display === "none") {
+                              infoSection.style.display = "block"; 
+                              overlay.style.display = "block"; 
+                              document.body.classList.add("active-blur"); 
+                          } else {
+                              infoSection.style.display = "none"; 
+                              overlay.style.display = "none";
+                              document.body.classList.remove("active-blur"); 
+                          }
+                      }
+
+                      function hideInfo() {
+                          document.getElementById("infoSection").style.display = "none"; 
+                          document.querySelector(".background-overlay").style.display = "none"; 
+                          document.body.classList.remove("active-blur");
+                      }
+                  </script>
+
+            </div>
+
+            
+           
+        
+            <!-- graduation image -->
+            <div class="studentImg">
+                <img src="imageResource/graduation-removebg-preview-removebg-preview.png" alt="graduation">
+            </div>
+        </section>
+        
+</header>
+
+<!--about section-->
+<section class="about-us" id="about">
+
+        <div class="imagesection">
+            <img src="imageResource/uni.png" alt="uni">
+        </div>
+
+        <div class="informationzz">
+
+            <h3>About Us</h3>
+            <p>
+                At UniCentral, we simplify and enhance the university application process. Our platform unifies multiple applications into one easy-to-use system, making your academic journey smoother and less stressful. With real-time updates and a seamless experience, you can manage everything from one central location and focus on what matters most—your education. Join us in transforming how students apply to universities and experience a new era of academic applications with UniCentral.
+            </p>
+        </div>
+
+</section>
+    
+<!--endless loop-->
+<section class="university-logos" >
+        <div class="logo-wrapper">
+            <div class="logos">
+                <img src="imageResource/uniLogos/Cape_Peninsula_University_of_Technology-logo.png" alt="University 1">
+                <img src="imageResource/uniLogos/Central_University_of_Technology_logo.png" alt="University 2">
+                <img src="imageResource/uniLogos/Durban_University_of_Technology-logo.png" alt="University 3">
+                <img src="imageResource/uniLogos/Mangosuthu_University_of_Technology-logo.png" alt="University 1">
+                <img src="imageResource/uniLogos/Nelson_Mandela_University-logo.png" alt="University 2">
+                <img src="imageResource/uniLogos/North_West_University-logo.png" alt="University 3">
+                <img src="imageResource/uniLogos/Rhodes_University-logo.png" alt="University 1">
+            </div>
+            <div class="logos">
+                <img src="imageResource/uniLogos/Sefako_Makgatho_University-logo.png" alt="University 2">
+                <img src="imageResource/uniLogos/Sol_Plaatje_University-logo.png" alt="University 3">
+                <img src="imageResource/uniLogos/Tshwane_University_of_Technology-logo.png" alt="University 1">
+                <img src="imageResource/uniLogos/University_of_Johannesburg-logo.png" alt="University 2">
+                <img src="imageResource/uniLogos/University_of_KwaZulu_Natal-logo.png" alt="University 3">
+                <img src="imageResource/uniLogos/Vaal_University_of_Technology-logo.png" alt="University 1">
+                <img src="imageResource/uniLogos/Walter_Sisulu_University-logo.png" alt="University 2">
+            </div>
+        </div>
+
+        <!--chatgbt-->
+        <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                const logoWrapper = document.querySelector('.logo-wrapper');
+                const logos = document.querySelectorAll('.logos');
+                let totalWidth = 0;
+
+                // Calculate total width of logos
+                logos.forEach(logoSet => {
+                    totalWidth += logoSet.offsetWidth;
+                });
+
+                // Duplicate the logos to create a seamless loop
+                logoWrapper.innerHTML += logoWrapper.innerHTML;
+
+                // Set CSS animation dynamically based on the total width
+                logoWrapper.style.width = `${totalWidth * 2}px`;
+
+                const styleElement = document.createElement('style');
+                styleElement.innerHTML = `
+                    @keyframes scroll {
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(-${totalWidth}px); }
+                    }
+                `;
+                document.head.appendChild(styleElement);
+            });
+
+        </script>
+</section>
+    
+      
+<!-- why us section -->
+<section class="why-us-section">
+    <h2>Why Choose UniCentral?</h2>
+    <p>We bring the future of university applications to your fingertips. UniCentral simplifies the application process and ensures you get the best support at every step. Here’s what makes us unique:</p>
+    <div class="why-us-features">
+        <div class="feature-item">
+            <i class="fas fa-paper-plane"></i>
+            <h3>Streamlined Process</h3>
+            <p>Easily apply to multiple universities in one place, saving you time and hassle.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-database"></i>
+            <h3>Comprehensive Data</h3>
+            <p>Access information about universities, deadlines, and programs all in one platform.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-headset"></i>
+            <h3>Expert Assistance</h3>
+            <p>Our support team is here to guide you throughout the application process.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-bell"></i>
+            <h3>Real-Time Notifications</h3>
+            <p>Get the latest updates and application deadlines as soon as they change.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-lock"></i>
+            <h3>Secure Platform</h3>
+            <p>Your data is encrypted and handled with care, ensuring your privacy is protected.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-laptop"></i>
+            <h3>Easy to Use</h3>
+            <p>Our simple, intuitive platform ensures a stress-free application experience.</p>
+        </div>
+    </div>
+</section>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+<!--virtual tours-->
+<section class="virtual-campus-tours" id="tours">
+      <h2>Virtual Campus Tours</h2>
+      <p class="intro">Explore the campuses of top South African universities from the comfort of your home. Discover libraries, student centers, labs, and accommodation to get a feel for the campus environment.</p>
+  
+      <div class="cardss">
+        <!-- Tour Item 1 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="imageResource/uniLogos/University_of_the_Western_Cape-logo.png" alt="University of Cape Town">
+            </div>
+            <h1>University of Cape Town</h1>
+            <p class="description">Experience the vibrant life at the University of Cape Town, from the stunning views of Table Mountain to the state-of-the-art labs and libraries.</p>
+            <button class="tour-button" data-tour-url="https://www.youtube.com/embed/0IldrY2Gkn0?si=S_qSrjO1hJZD5e-U">3D Tour</button>
+        </div>
+        
+        <!-- Tour Item 2 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="imageResource/uniLogos/University_of_Witwatersrand_logo.png" alt="University of the Witwatersrand">
+            </div>
+            <h1>University of the Witwatersrand</h1>
+            <p class="description">Take a virtual tour of the University of the Witwatersrand and explore its iconic campus landmarks and modern facilities.</p>
+            <button class="tour-button" data-tour-url="https://www.youtube.com/embed/Je-CCEvaZW8?si=PsIEj1CGdWSokaXE"  >3D Tour</button>
+        </div>
+    
+        <!-- Tour Item 3 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="imageResource/uniLogos/University_of_Pretoria-logo.png" alt="University of Pretoria">
+            </div>
+            <h1>University of Pretoria</h1>
+            <p class="description">Discover the University of Pretoria's extensive campus and facilities through this engaging virtual tour.</p>
+            <button class="tour-button" data-tour-url="https://www.youtube.com/embed/1ymWwBCBcnQ?si=6HH5gi-1fOVT_Ynm" >3D Tour</button>
+        </div>
+        
+        <!-- Tour Item 4 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="imageResource/uniLogos/University_of_Johannesburg-logo.png" alt="University of Johannesburg">
+            </div>
+            <h1>University of Johannesburg</h1>
+            <p class="description">Explore the University of Johannesburg's dynamic campus and student life in this interactive virtual tour.</p>
+            <button class="tour-button" data-tour-url="https://www.youtube.com/embed/rBNXxLkvn8I?si=se9L5gFyf9IfBnl-" ">3D Tour</button>
+        </div>
+        
+        <!-- Tour Item 5 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="imageResource/uniLogos/University_of_Stellenbosch-logo.png" alt="University of Stellenbosch">
+            </div>
+            <h1>University of Stellenbosch</h1>
+            <p class="description">Experience the scenic beauty and innovative facilities of the University of Stellenbosch through this virtual tour.</p>
+            <button class="tour-button" data-tour-url="https://www.youtube.com/embed/JVmjc0eHzWg?si=QvNNOq24P7F-DAWC" ">3D Tour</button>
+        </div>
+        
+        <!-- Tour Item 6 -->
+        <div class="card">
+            <div class="card-image">
+                <img src="imageResource/uniLogos/Tshwane_University_of_Technology-logo.png" alt="Tshwane University of Technology">
+            </div>
+            <h1>Tshwane University of Technology</h1>
+            <p class="description">Take a look at Tshwane University of Technology's campus and explore its diverse academic and recreational spaces.</p>
+            <button class="tour-button" data-tour-url="https://www.youtube.com/embed/p-bWCp1p828?si=S82m8GW_m83PpP8k">3D Tour</button>
+        </div>
+  
+    </div>
+    
+  
+      <!-- 3D Tour Popup -->
+      <div id="tour-popup" class="hidden">
+          <button id="close-popup">Close</button>
+          <div id="popup-content">
+            
+                <iframe width="100%" height="100%" id="video-frame" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+           
+          </div>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const tourButtons = document.querySelectorAll('.tour-button');
+        const tourPopup = document.getElementById('tour-popup');
+        const popupContent = document.getElementById('popup-content');
+        const closePopup = document.getElementById('close-popup');
+
+        tourButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tourUrl = button.getAttribute('data-tour-url');
+                popupContent.innerHTML = `<iframe src="${tourUrl}" frameborder="0" allowfullscreen></iframe>`;
+                tourPopup.classList.remove('hidden');
+            });
+        });
+
+        closePopup.addEventListener('click', () => {
+            tourPopup.classList.add('hidden');
+            popupContent.innerHTML = '';
+            });
+        });
+
+      </script>
+</section>
+  
+<!--contact us froms-->
+<section class="contact-us" id="contact">
+    <div class="contact-header">   
+        <h2>Contact Us</h2>
+    </div>
+    <div class="contact-content">
+        <div class="contact-form">
+            <div class="contLog">
+                <img src="logoSVG/myone.svg" alt="University Logo" class="university-logo">
+            </div>
+            <p>Have questions or need support? Fill out the form below and we'll get back to you as soon as possible.</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="First name" />
+                </div>
+                <div class="form-group">
+                    <label for="surname">Surname</label>
+                    <input type="text" id="surname" name="surname" placeholder="Surname" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="example@example.com" />
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject of your message" />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your message here..."></textarea>
+                </div>
+                <button type="button" class="submit-button" onclick="validateForm()">Send Message</button>
+            </form>
+
+            <script>
+                    function validateForm() {
+                        let isValid = true;
+                        const form = document.getElementById('contactForm');
+                        const fields = form.querySelectorAll('input, textarea');
+                    
+                        fields.forEach(field => {
+                            if (field.type === 'email' && !validateEmail(field.value)) {
+                                field.classList.add('invalid');
+                                isValid = false;
+                            } else if (field.value.trim() === '') {
+                                field.classList.add('invalid');
+                                isValid = false;
+                            } else {
+                                field.classList.remove('invalid');
+                                field.classList.add('valid');
+                            }
+                    });
+                    
+                        if (isValid) {
+                            showPopup('Email sent successfully!', 'success');
+                        } else {
+                            showPopup('Please correct the highlighted errors.', 'error');
+                        }
+                    }
+                
+                        function validateEmail(email) {
+                        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        return re.test(email);
+                    }
+                
+                        function showPopup(message, type) {
+                        const popup = document.createElement('div');
+                        popup.className = `popup ${type}`;
+                        popup.textContent = message;
+                        document.body.appendChild(popup);
+                    
+                        setTimeout(() => {
+                            popup.classList.add('show');
+                        }, 100);
+                    
+                        setTimeout(() => {
+                            popup.classList.remove('show');
+                            document.body.removeChild(popup);
+                        }, 2000);
+                    }
+         
+             </script>
+        </div>
+        <div class="find-us">
+            <img src="imageResource/grad.png" alt="Graduate" class="graduate-image">
+            <h2>Find Us</h2>
+            <p>Our office is located at:</p>
+            <p>1234 University Road, City, Country</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: contact@university.com</p>
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<footer id="footer" id="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="logoSVG/myone.svg" alt="UniCentral Logo" class="footer-logo-img">
+    </div>
+    <div class="footer-links">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home" class="smoothScroll">Home</a></li>
+          <li><a href="#about" class="smoothScroll">About Us</a></li>
+          <li><a href="#tours" class="smoothScroll">Universities</a></li>
+          <li><a href="#contact" class="smoothScroll">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Connect with Us</h4>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Subscribe to Our Newsletter</h4>
+        <form class="newsletter" id="newsletter">
+            <div class="input-container" id="email-container">
+                <input placeholder="Enter your email" id="mail" type="email">
+                <div id="error-message" class="popup error">Invalid email address</div>
+                <div id="success-message" class="popup success">Subscription successful</div>
+            </div>
+            <button type="submit">Subscribe</button>
+        </form>
+
+        <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                const form = document.getElementById('newsletter');
+                const emailInput = document.getElementById('mail');
+                const emailContainer = document.getElementById('email-container');
+                const errorPopup = document.getElementById('error-message');
+                const successPopup = document.getElementById('success-message');
+
+                form.addEventListener('submit', (event) => {
+                    event.preventDefault(); 
+
+                    const emailValue = emailInput.value.trim();
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                    if (!emailPattern.test(emailValue)) {
+                        // Invalid email
+                        showPopup(errorPopup);
+                        emailContainer.classList.add('error');
+                        emailContainer.classList.remove('success');
+                    } else {
+                        // Valid email
+                        showPopup(successPopup);
+                        emailContainer.classList.add('success');
+                        emailContainer.classList.remove('error');
+                    }
+                });
+
+                function showPopup(popup) {
+                    // Hide all popups
+                    document.querySelectorAll('.popup').forEach(p => p.classList.remove('show'));
+                    // Show the specific popup
+                    popup.classList.add('show');
+                    // Hide the popup after 3 seconds
+                    setTimeout(() => popup.classList.remove('show'), 2000);
+                    }
+                });
+        </script>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 UniCentral. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  
+</body>
+</html>
