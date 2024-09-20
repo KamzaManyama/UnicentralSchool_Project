@@ -3,8 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
@@ -706,7 +704,7 @@ body.active-blur {
 
 .why-us-section {
     background-color: #fff;
-    padding: 50px 50px;
+    padding: 50px;
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
 }
