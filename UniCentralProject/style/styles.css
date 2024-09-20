@@ -40,7 +40,7 @@ header::before {
 /* Navigation Bar Styling */
 .navigation {
     display: flex;
-    justify-content: space-between; /* Space between logo and navlinks/buttons */
+    justify-content: space-between;
     align-items: center;
     padding: 20px 30px;
     background-color: transparent;
@@ -55,54 +55,54 @@ header::before {
 
 /* Styling for navigation links container */
 .navlinks {
-    display: flex; /* Use flexbox to align items inline */
-    flex: 1; /* Take up available space between logo and button */
-    align-items: center; /* Vertically center items */
-    justify-content: center; /* Center items horizontally */
+    display: flex; 
+    flex: 1; 
+    align-items: center; 
+    justify-content: center; 
 }
 
 /* Styling for the navigation links */
 .navlinks ul {
-    display: flex; /* Display navigation items in a row */
-    list-style: none; /* Remove bullet points */
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
+    display: flex;
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
 }
 
 .navlinks ul li {
-    margin-right: 20px; /* Space out navigation items */
+    margin-right: 20px; 
 }
 
 .navlinks ul li a {
-    text-decoration: none; /* Remove underline from links */
-    color: #003366; /* Change to desired link color */
-    font-size: 16px; /* Adjust font size as needed */
-    padding: 10px; /* Add padding for spacing */
-    transition: color 0.3s; /* Smooth color transition */
+    text-decoration: none; 
+    color: #003366; 
+    font-size: 16px; 
+    padding: 10px; 
+    transition: color 0.3s; 
 }
 
 .navlinks ul li a:hover {
-    color: #f0c300; /* Change color on hover */
+    color: #f0c300; 
 }
 
 /* Styling for the buttons container */
 .buttons {
-    margin-left: auto; /* Push the button to the far right */
+    margin-left: auto;
 }
 
 /* Styling for the 'Join Us' button */
 .buttons .signin {
-    background-color: #003366; /* Background color for button */
-    color: #ffffff; /* Text color for button */
-    border: none; /* Remove border */
-    padding: 10px 20px; /* Adjust padding */
-    font-size: 16px; /* Adjust font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth background color transition */
+    background-color: #003366; 
+    color: #ffffff;
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
 }
 
 .buttons .signin:hover {
-    background-color: #002244; /* Darker background color on hover */
+    background-color: #002244; 
 }
 
 
@@ -148,7 +148,7 @@ body.active-blur {
 
 /* Burger Menu toggled styles */
 .burger-menu.active div:nth-child(1) {
-    transform: rotate(-45deg) translate(-12px, 12px); /* Adjusted rotation and translation for crossing */
+    transform: rotate(-45deg) translate(-12px, 12px); 
 }
 
 .burger-menu.active div:nth-child(2) {
@@ -156,7 +156,7 @@ body.active-blur {
 }
 
 .burger-menu.active div:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px); /* Adjusted rotation and translation for crossing */
+    transform: rotate(45deg) translate(-5px, -6px); 
 }
 
 
@@ -210,7 +210,7 @@ body.active-blur {
 
 /* Burger Menu */
 .burger-menu {
-    display: none; /* Hidden by default on larger screens */
+    display: none; 
     flex-direction: column;
     cursor: pointer;
    
@@ -236,24 +236,24 @@ body.active-blur {
 /* For devices up to 992px (tablets and below) */
 @media (max-width: 992px) {
     .navlinks {
-        display: none; /* Hide navlinks by default on small screens */
-        flex-direction: column; /* Stack navlinks vertically */
+        display: none;
+        flex-direction: column;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.9); /* Background color for menu */
+        background-color: rgba(0, 0, 0, 0.9); 
         position: absolute;
-        top: 60px; /* Adjust based on your header height */
+        top: 60px;
         left: 0;
         padding: 10px;
         z-index: 1000;
     }
 
     .navlinks.active {
-        display: flex; /* Show navlinks when active */
+        display: flex; 
     }
 
     .navlinks ul {
-        display: flex; /* Flex container for vertical layout */
-        flex-direction: column; /* Stack links vertically */
+        display: flex; 
+        flex-direction: column; 
         padding: 0;
         margin: 0;
     }
@@ -264,49 +264,47 @@ body.active-blur {
     }
 
     .navlinks ul li a {
-        color: #ffffff; /* White text color for nav links */
-        font-size: 18px; /* Font size for nav links */
-        text-decoration: none; /* Remove underline from links */
-    }
-
-    .burger-menu {
-        display: flex; /* Show burger menu on smaller screens */
-        align-items: center;
-        justify-content: center;
-        height: 40px;
-        cursor: pointer; /* Pointer cursor for burger menu */
-    }
-
-    .burger-menu div {
-        width: 25px;
-        height: 3px;
-        background-color: #ffffff;
-        margin: 5px 0;
-        transition: 0.3s;
-    }
-
-    /* Ensure the existing 'Join Us' button is visible within the navlinks */
-    .navlinks.active .buttons {
-        display: block; /* Show .buttons section when navlinks are active */
-        margin-top: 20px; /* Margin for spacing */
-        text-align: center; /* Center button in the menu */
-    }
-
-    /* Style the existing 'Join Us' button */
-    .navlinks.active .buttons .signin {
-        background-color: #003366; /* Background color for button */
-        color: #ffffff; /* Text color for button */
-        border: none; /* Remove border */
-        padding: 12px 24px; /* Padding for button */
-        font-size: 18px; /* Font size for button */
-        cursor: pointer; /* Pointer cursor on hover */
-        text-align: center; /* Center text in the button */
-    }
-
-    .navlinks.active .buttons .signin:hover {
-        background-color: #002244; /* Darker background on hover */
-    }
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
 }
+
+.burger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    cursor: pointer;
+}
+
+.burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.navlinks.active .buttons {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.navlinks.active .buttons .signin {
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.navlinks.active .buttons .signin:hover {
+    background-color: #002244;
+}
+
 
 
 
@@ -315,7 +313,7 @@ body.active-blur {
 /* For devices with a width up to 768px */
 @media (max-width: 768px) {
     .info-section {
-        width: 90%; /* Adjust width for better fit */
+        width: 90%; 
         max-width: 380px;
         padding: 15px;
         font-size: 16px;
@@ -343,7 +341,7 @@ body.active-blur {
     }
 
     .logo img {
-        height: 40px; /* Adjust logo size */
+        height: 40px; 
     }
 }
 
@@ -394,7 +392,7 @@ body.active-blur {
 
 .information {
     flex: 1;
-    padding: 50px; /* Reduced padding */
+    padding: 50px; 
 }
 
 .information h1 {
@@ -465,16 +463,16 @@ body.active-blur {
     .information {
         flex: 1 1 100%;
         text-align: center;
-        padding: 20px; /* Adjusted for smaller screens */
+        padding: 20px; 
     }
 
     .studentImg {
-        margin-top: 20px; /* Optional space adjustment when stacking */
-        width: 100%; /* Ensure the image doesn't overflow */
+        margin-top: 20px; 
+        width: 100%; 
     }
   
     .studentImg img {
-        width: 100%; /* Adjust to fit */
+        width: 100%; 
     }
 }
 
@@ -484,7 +482,7 @@ body.active-blur {
     }
 
     .studentImg img {
-        display: none; /* Ensure image is hidden */
+        display: none; 
     }
 }
 
@@ -684,21 +682,21 @@ body.active-blur {
 /* Media Query for devices smaller than 1200px */
 @media (max-width: 1200px) {
     .logos img {
-        width: 120px; /* Reduce image width */
+        width: 120px; 
     }
 }
 
 /* Media Query for devices smaller than 992px */
 @media (max-width: 992px) {
     .logos img {
-        width: 100px; /* Further reduce image width */
+        width: 100px; 
     }
 }
 
 /* Media Query for devices smaller than 768px */
 @media (max-width: 768px) {
     .logos img {
-        width: 80px; /* Further reduce image width */
+        width: 80px; 
     }
 }
 
@@ -803,38 +801,38 @@ body.active-blur {
 /* Media Queries for Devices Larger than 1000px */
 @media (min-width: 1000px) {
     .why-us-section {
-        padding: 60px 100px; /* Increased padding for more spacious layout */
+        padding: 60px 100px;
     }
 
     .why-us-section h2 {
-        font-size: 2.5em; /* Larger heading size for better visibility */
+        font-size: 2.5em;
     }
 
     .why-us-section p {
-        font-size: 1.1em; /* Slightly larger text for better readability */
-        max-width: 800px; /* Increase max-width for more text space */
+        font-size: 1.1em;
+        max-width: 800px;
     }
 
     .why-us-features {
-        grid-template-columns: repeat(3, 1fr); /* Ensure three-column layout */
-        gap: 40px; /* Increase gap for more spacing */
-        max-width: 1200px; /* Increase max-width to use more screen space */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1200px;
     }
 
     .feature-item {
-        padding: 20px 15px; /* Increase padding for a more spacious look */
+        padding: 20px 15px;
     }
 
     .feature-item i {
-        font-size: 3.5em; /* Larger icons for better visibility */
+        font-size: 3.5em;
     }
 
     .feature-item h3 {
-        font-size: 1.6em; /* Larger heading size for feature items */
+        font-size: 1.6em; 
     }
 
     .feature-item p {
-        font-size: 1em; /* Slightly larger font size for better readability */
+        font-size: 1em; 
     }
 }
 
@@ -1236,19 +1234,19 @@ input.invalid, textarea.invalid {
     }
 
     .submit-button {
-        width: auto; /* Adjust button width to fit container */
-        padding: 12px 24px; /* Adjust padding for better usability */
+        width: auto; 
+        padding: 12px 24px; 
     }
 }
 
 /* For devices with a width up to 480px (mobile devices) */
 @media (max-width: 480px) {
     .contact-header h2 {
-        font-size: 1.5em; /* Smaller heading size for mobile */
+        font-size: 1.5em; 
     }
 
     .contact-form p, .find-us p {
-        font-size: 0.9em; /* Smaller font size for mobile */
+        font-size: 0.9em; 
     }
 
     .form-group input, .form-group textarea {
@@ -1256,8 +1254,8 @@ input.invalid, textarea.invalid {
     }
 
     .submit-button {
-        width: 100%; /* Full width button for better touch targets */
-        padding: 12px; /* Adjust padding for touch accessibility */
+        width: 100%; 
+        padding: 12px; 
     }
 }
 
