@@ -198,7 +198,7 @@ input[type="password"] {
 .toggle {
     background-color: #f0c300;
     height: 100%;
-    background: linear-gradient(to right, #003366, #001f3f);
+    background-color: linear-gradient(to right, #003366, #001f3f);
     color: #ffffff;
     position: relative;
     left: -100%;
